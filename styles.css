@@ -1,80 +1,113 @@
-
-/* Reset básico */
-body, h1, h2, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Importación de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600;900&display=swap');
 
 /* Estilos generales */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #84fab0, #8fd3f4);
-    color: #333;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* Contenedor principal */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Títulos */
+/* Encabezados */
 h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: #003366;
     text-align: center;
-    color: #4a90e2;
-    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #333;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #4a90e2;
+    font-family: 'Montserrat', sans-serif;
+    color: #00509E;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00509E;
     padding-bottom: 5px;
 }
 
 /* Enlaces */
 a {
-    color: #4a90e2;
+    color: #007ACC;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #00509E;
 }
 
 /* Listas */
 ul {
-    list-style-type: square;
-    margin: 15px 0;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-li {
-    margin: 5px 0;
+ul li {
+    margin-bottom: 10px;
 }
 
-/* Párrafos */
-p {
-    margin: 10px 0 20px;
+ul li::before {
+    content: '•';
+    color: #00509E;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #003366;
+    color: #fff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 /* Secciones */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Transiciones y efectos */
-a:hover, li:hover {
-    color: #e94e77;
-    transition: color 0.3s ease;
+/* Responsivo */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
 }
